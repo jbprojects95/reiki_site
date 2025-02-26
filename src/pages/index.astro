@@ -1,8 +1,53 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+
+const cardData = [
+  {
+    title: "Reiki Therapy",
+    imageURL: "src/assets/card-images/hands-on-reiki.svg",
+    description:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
+  },
+  {
+    title: "Chakra Balancing",
+    imageURL: "src/assets/card-images/chakra.svg",
+    description:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
+  },
+  {
+    title: "Aura Cleanse",
+    imageURL: "src/assets/card-images/smart.svg",
+    description:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
+  },
+  {
+    title: "Animal Reiki",
+    imageURL: "src/assets/card-images/reiki.svg",
+    description:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
+  },
+  {
+    title: "Bio-field Tuning",
+    imageURL: "src/assets/card-images/tuning-fork.svg",
+    description:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
+  },
+];
 ---
 
 <Layout>
   <Hero />
+  <div class="flex flex-wrap justify-center content-center gap-3 pt-5">
+    {
+      cardData.map((data) => (
+        <Card
+          title={data.title}
+          imageURL={data.imageURL}
+          description={data.description}
+        />
+      ))
+    }
+  </div>
 </Layout>
