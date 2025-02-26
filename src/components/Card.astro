@@ -10,11 +10,11 @@ const { title, description, imageURL, href } = Astro.props;
 ---
 
 <div
-  class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  class="max-w-sm text-center bg-white border border-gray-200 shadow-sm dark:bg-gray-800 dark:border-gray-700 m-2"
 >
   <a href={href}>
     <img
-      class="rounded-t-lg"
+      class="w-32 h-auto mx-auto pt-4"
       src={imageURL}
       alt=`image describing treatment ${title}`
     />
@@ -22,7 +22,7 @@ const { title, description, imageURL, href } = Astro.props;
   <div class="p-5">
     <a href={href}>
       <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        class="mb-2 text-2xl font-bold tracking-wide text-gray-900 dark:text-white"
       >
         {title}
       </h5>

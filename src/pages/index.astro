@@ -5,31 +5,43 @@ import Card from "../components/Card.astro";
 
 const cardData = [
   {
-    title: "Reiki Therapy",
+    title: "Hands on Reiki",
+    link: "/",
     imageURL: "src/assets/card-images/hands-on-reiki.svg",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
   },
   {
+    title: "Distance Reiki",
+    link: "/",
+    imageURL: "src/assets/card-images/hands-on-experience.svg",
+    description:
+      "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
+  },
+  {
     title: "Chakra Balancing",
+    link: "/",
     imageURL: "src/assets/card-images/chakra.svg",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
   },
   {
     title: "Aura Cleanse",
+    link: "/",
     imageURL: "src/assets/card-images/smart.svg",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
   },
   {
     title: "Animal Reiki",
-    imageURL: "src/assets/card-images/reiki.svg",
+    link: "/",
+    imageURL: "src/assets/card-images/pet.svg",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
   },
   {
     title: "Bio-field Tuning",
+    link: "/",
     imageURL: "src/assets/card-images/tuning-fork.svg",
     description:
       "Lorem ipsum odor amet, consectetuer adipiscing elit. Condimentum praesent magnis imperdiet aliquet mi donec. Rutrum ullamcorper malesuada risus tempor maximus iaculis viverra.",
@@ -46,6 +58,7 @@ const cardData = [
           title={data.title}
           imageURL={data.imageURL}
           description={data.description}
+          href={data.link}
         />
       ))
     }
