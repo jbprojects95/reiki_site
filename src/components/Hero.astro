@@ -6,13 +6,13 @@ import testImage from "../assets/lotus-flower.jpg";
 // import testImage from "../assets/images/meditation-square.jpg";
 ---
 
-<div class="p-2 mx-auto max-w-screen-xl text-center md:px-8 lg:py-16">
-  <div class="grid gap-5 grid-cols-1 md:grid-cols-1 lg:gap-4 lg:grid-cols-2">
+<div class="relative mx-auto max-w-screen-xl">
+  <div class="grid gap-4 grid-cols-1 content-center">
     <div class="flex mx-auto my-auto w-full h-full lg:w-auto lg:h-auto">
       <Image
         src={testImage}
         alt="Lotus image"
-        class="flex justify-center items-center mx-auto max-w-50 shadow-sm md:max-w-lg lg:max-w-lg max-h-auto"
+        class="aspect-auto max-w-full shadow-sm md:max-w-full"
       />
       <!-- <svg
         width="200"
@@ -34,14 +34,16 @@ import testImage from "../assets/lotus-flower.jpg";
       </svg> -->
     </div>
 
-    <div class="flex flex-col gap-1 lg:p-5 md:p-4">
+    <div
+      class="absolute inset-0 my-auto p-2 flex flex-col items-center justify-center text-center gap-1 md:px-8 lg:py-16"
+    >
       <h1
-        class="flex justify-center content-center mb-5 text-4xl font-bold tracking-wide text-zinc-700 md:text-6xl lg:text-7xl dark:text-white"
+        class="mb-4 text-3xl font-bold tracking-wide text-zinc-100 md:text-4xl lg:text-6xl dark:text-white"
       >
         Restore your inner balance
       </h1>
       <p
-        class="px-2 mb-5 text-lg font-normal text-zinc-700 lg:text-xl lg:px-16 dark:text-gray-400"
+        class="px-2 mb-5 text-lg font-normal text-zinc-100 md:xl lg:text-2xl lg:px-16 dark:text-gray-400"
       >
         Relax and unwind with the gentle and soothing power of Reiki. Realigning
         your energy, easing stresses and nurturing your inner self.
@@ -51,7 +53,7 @@ import testImage from "../assets/lotus-flower.jpg";
         class="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:w-auto sm:space-y-0"
       >
         <button
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-violet-500 hover:bg-violet-800 focus:ring-4 focus:ring-violet-300 dark:focus:ring-violet-900"
+          class="inline-flex justify-center items-center py-3 px-5 text-xl lg:text-2xl font-bold text-center text-white rounded-lg bg-violet-500 hover:bg-violet-800 focus:ring-4 focus:ring-violet-300 dark:focus:ring-violet-900"
         >
           Contact
         </button>
