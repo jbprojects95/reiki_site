@@ -4,47 +4,74 @@ import { Image } from "astro:assets";
 // import testImage from "../assets/openhands.jpg";
 import testImage from "../assets/lotus-flower.jpg";
 // import testImage from "../assets/images/meditation-square.jpg";
+import Button from "../components/Button.astro";
 ---
 
-<div
-  class="relative mx-auto max-w-screen-2xl grid gap-4 grid-cols-1 content-center"
->
+<div class="mx-auto max-w-screen-2xl grid gap-4 grid-cols-1 content-center">
   <div class="grid gap-4 grid-cols-1 content-center">
-    <div class="flex mx-auto my-auto w-full h-full lg:w-auto lg:h-auto">
-      <div class="relative">
+    <div
+      class="[grid-area:1/1] flex mx-auto my-auto w-full h-full lg:w-auto lg:h-auto"
+    >
+      <div class="grid">
         <Image
           src={testImage}
           alt="Lotus image"
-          class="aspect-auto xl:aspect-video 2xl:aspect-video max-w-full shadow-lg"
+          class="[grid-area:1/1] aspect-square md:aspect-auto lg:aspect-auto xl:aspect-video 2xl:aspect-video max-w-full shadow-lg"
         />
 
-        <div class="absolute inset-0 bg-slate-700 opacity-40"></div>
+        <div
+          class="[grid-area:1/1] mx-auto my-auto w-full h-full inset-0 bg-slate-700 opacity-40"
+        >
+        </div>
       </div>
     </div>
 
     <div
-      class="md:absolute lg:absolute inset-0 my-auto p-2 flex flex-col items-center justify-center text-center gap-1 md:px-8 lg:py-16"
+      class="[grid-area:1/1] relative z-30 my-auto flex flex-col items-center justify-center text-center gap-1 md:px-8 lg:py-16"
     >
       <h1
-        class="mb-4 text-3xl font-bold tracking-wide text-zinc-700 md:text-zinc-100 lg:text-zinc-100 md:text-5xl lg:text-6xl dark:text-white"
+        class="mb-4 text-3xl font-bold tracking-wide text-zinc-100 md:text-5xl lg:text-6xl dark:text-white"
       >
         Restore your inner balance
       </h1>
       <p
-        class="px-2 mb-5 text-lg font-normal text-zinc-700 md:text-zinc-100 md:text-xl lg:text-zinc-100 lg:text-2xl lg:px-16 dark:text-gray-400"
+        class="px-2 mb-5 text-lg font-normal text-zinc-100 lg:text-2xl lg:px-16 dark:text-gray-400"
       >
         Relax and unwind with the gentle and soothing power of Reiki. Realigning
         your energy, easing stresses and nurturing your inner self.
       </p>
 
       <div
-        class="flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:w-auto sm:space-y-0"
+        class="flex flex-col items-center justify-center w-auto lg:space-y-4 md:space-y-4"
       >
         <button
-          class="transition transform duration-280 hover:scale-105 flex justify-center items-center shadow-lg py-3 px-5 text-xl lg:text-2xl font-semibold tracking-wide text-center text-white rounded-md bg-indigo-500 hover:bg-indigo-700 focus:ring-1 focus:ring-indigo-300 focus: dark:focus:ring-violet-900"
-        >
-          Contact
+          class="py-2 px-4 w-full text-xl text-white lg:text-2xl font-semibold tracking-wide bg-violet-500 rounded-lg cursor-pointer select-none
+        active:translate-y-0.5 active:[box-shadow:0_0px_0_0_#5d0ec0,0_0px_0_0_#5d0ec0]
+        active:border-b-transparent
+        transition-all duration-100 [box-shadow:0_5px_0_0_#5d0ec0,0_5px_0_0_#5d0ec0] md:lg:xl:2xl:[box-shadow:0_8px_0_0_#5d0ec0,0_8px_0_0_#5d0ec0]
+        border-b-[1px] border-violet-800"
+          >Book Now
         </button>
+        <!-- <a
+          href="#"
+          class=
+        >
+          Book now
+          <svg
+            class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+          </svg>
+        </a> -->
       </div>
     </div>
   </div>
